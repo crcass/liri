@@ -27,8 +27,8 @@ let concertThis = ((queryTerm) => {
 	let queryUrl = `https://rest.bandsintown.com/artists/${queryTerm}/events?app_id=codingbootcamp`;
 	axios.get(queryUrl).then((response) => {
 		let userData = [];
-		userData.push(`CONCERT DATA, Artist: ${titleCase(queryTerm)}`);
-		console.log(`     LIRI concert info from BandsInTown:`);
+		userData.push(`${queryType}, Artist: ${titleCase(queryTerm)}`);
+		console.log(`\n     LIRI concert info from BandsInTown:`);
 		console.log(`   ---------------------------------------`);
 		console.log(`    * ${titleCase(queryTerm)}'s next three shows:\n`);
 		for (let i = 0; i < 3; i++) {
@@ -56,9 +56,8 @@ let spotifyThis = ((queryTerm) =>{
 	  }
 	let song = data.tracks.items[0];
 	let userData = [];
-	userData.push(`SPOTIFY DATA, Title: ${song.name},Artist(s): ${song.album.artists[0].name},Album: ${song.album.name},Preview on Spotify: ${song.album.external_urls.spotify}`);
-
-    console.log(`     LIRI song info from Spotify:`);
+	userData.push(`${queryType}, Title: ${song.name},Artist(s): ${song.album.artists[0].name},Album: ${song.album.name},Preview on Spotify: ${song.album.external_urls.spotify}`);
+    console.log(`\n     LIRI song info from Spotify:`);
     console.log(`   --------------------------------`);
    	console.log(`     * Title: ${song.name}`);
    	console.log(`     * Artist(s): ${song.album.artists[0].name}`);
@@ -77,9 +76,8 @@ let movieThis = ((queryTerm) => {
 	let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
 	axios.get(queryUrl).then((response) => {
 		let userData = [];
-		userData.push(`MOVIE DATA, Title: ${response.data.Title},Released: ${response.data.Year},IMDB Rating: ${response.data.Year},${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value},Filmed in ${response.data.Country},Plot: ${response.data.Plot},Cast: ${response.data.Actors}`);
-
-		console.log(`     LIRI movie info from OMDB:`);
+		userData.push(`${queryType}, Title: ${response.data.Title},Released: ${response.data.Year},IMDB Rating: ${response.data.Year},${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value},Filmed in ${response.data.Country},Plot: ${response.data.Plot},Cast: ${response.data.Actors}`);
+		console.log(`\n     LIRI movie info from OMDB:`);
 		console.log(`   ------------------------------`);
 		console.log(`     * Title: ${response.data.Title}`);
 		console.log(`     * Released: ${response.data.Year}`);
@@ -99,6 +97,9 @@ let movieThis = ((queryTerm) => {
 let liriChoice = (() => {
 	fs.readFile('random.txt', 'utf8', (err, data) => {
 		if (err) throw err;
+		fs.appendFile('log.txt', ',LIRI,', (err) => {
+		  if (err) throw err;
+		});
 		options = data.split(',');
 		liri = randomNum(3);
 
