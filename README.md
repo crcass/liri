@@ -6,7 +6,7 @@ LIRI is a command line tool that will provide the user with information about up
 
 Commands
 * `node liri.js` will bring up a list of commands
-* `node liri.js concert-this <user-input`> will search for concerts
+* `node liri.js concert-this <user-input>` will search for concerts
 * `node liri.js spotify-this-song <user-input>` will search for songs on Spotify
 * `node liri.js movie-this <user-input>` will search for movie info
 * `node liri.js do-what-it-says` will let LIRI decide the type and subject of your search
