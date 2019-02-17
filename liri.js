@@ -10,7 +10,7 @@ const moment = require('moment');
 let queryType = process.argv[2];
 let queryTerm = process.argv.slice(3).join(' ');
 
-// converts test to Title Case
+// converts text to Title Case
 let titleCase = ((str) => {
     return str.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
