@@ -13,4 +13,6 @@ Commands
 
 This project was built for the SMU Coding Bootamp using [node-spotify-api](https://www.npmjs.com/package/node-spotify-api), [axios](https://www.npmjs.com/package/axios), [moment](https://www.npmjs.com/package/moment), & [dotenv](https://www.npmjs.com/package/dotenv).
 
+**Please Note:** you will need to create your own [Spotify API key](https://developer.spotify.com/) to use LIRI on your local machine.
+
 ♥︎ cc
