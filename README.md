@@ -11,7 +11,7 @@ Commands
 * `node liri.js movie-this <user-input>` will search for movie info
 * `node liri.js do-what-it-says` will let LIRI decide the type and subject of your search
 
-This project was built for the SMU Coding Bootamp using [node-spotify-api](https://www.npmjs.com/package/node-spotify-api), [axios](https://www.npmjs.com/package/axios), [moment](https://www.npmjs.com/package/moment), & [dotenv](https://www.npmjs.com/package/dotenv).
+This app was built  using [node-spotify-api](https://www.npmjs.com/package/node-spotify-api), [axios](https://www.npmjs.com/package/axios), [moment](https://www.npmjs.com/package/moment), & [dotenv](https://www.npmjs.com/package/dotenv).
 
 **Please Note:** you will need to create your own [Spotify API key](https://developer.spotify.com/) to use LIRI on your local machine.
 
