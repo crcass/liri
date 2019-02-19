@@ -50,7 +50,7 @@ let concertThis = ((queryTerm) => {
 });
 
 // takes user input and returns song info from Spotify
-let spotifyThis = ((queryTerm) =>{
+let spotifyThis = ((queryTerm) => {
   spotify.search({ type: 'track', query: queryTerm || 'the sign ace of base'}, ((err, data) => {
     if (err) {
       return console.log(`Error occurred: ${err}`);
