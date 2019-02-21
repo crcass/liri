@@ -56,8 +56,7 @@ let spotifyThis = (queryTerm) => {
       return console.log(`Error occurred: ${err}`);
     }
   let song = data.tracks.items[0];
-  let userData = [];
-  userData.push(`${queryType}, Title: ${song.name},Artist(s): ${song.album.artists[0].name},Album: ${song.album.name},Preview on Spotify: ${song.album.external_urls.spotify}`);
+  let userData = `${queryType}, Title: ${song.name},Artist(s): ${song.album.artists[0].name},Album: ${song.album.name},Preview on Spotify: ${song.album.external_urls.spotify}`;
     console.log(`\n     LIRI song info from Spotify:`);
     console.log(`   --------------------------------`);
     console.log(`     * Title: ${song.name}`);
@@ -76,8 +75,7 @@ let movieThis = (queryTerm) => {
   queryTerm = queryTerm || 'mr nobody'
   let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
   axios.get(queryUrl).then((response) => {
-    let userData = [];
-    userData.push(`${queryType}, Title: ${response.data.Title},Released: ${response.data.Year},IMDB Rating: ${response.data.Year},${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value},Filmed in ${response.data.Country},Plot: ${response.data.Plot},Cast: ${response.data.Actors}`);
+    let userData = `${queryType}, Title: ${response.data.Title},Released: ${response.data.Year},IMDB Rating: ${response.data.Year},${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value},Filmed in ${response.data.Country},Plot: ${response.data.Plot},Cast: ${response.data.Actors}`;
     console.log(`\n     LIRI movie info from OMDB:`);
     console.log(`   ------------------------------`);
     console.log(`     * Title: ${response.data.Title}`);
