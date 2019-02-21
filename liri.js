@@ -9,6 +9,7 @@ const moment = require('moment');
 // global variables for user input
 let queryType = process.argv[2];
 let queryTerm = process.argv.slice(3).join(' ');
+const divider = "\n------------------------------------------------------------\n\n";
 
 // converts text to Title Case
 let titleCase = (str) => {
@@ -41,7 +42,7 @@ let concertThis = (queryTerm) => {
       console.log(`                 --------`);
 
       if (i === 2) {
-        fs.appendFile('log.txt', userData, (err) => {
+        fs.appendFile('log.txt', userData + divider, (err) => {
           if (err) throw err;
         });
       }
@@ -64,7 +65,7 @@ let spotifyThis = (queryTerm) => {
     console.log(`     * Album: ${song.album.name}`);
     console.log(`     * Preview on Spotify: ${song.album.external_urls.spotify}\n`);
 
-    fs.appendFile('log.txt', userData, (err) => {
+    fs.appendFile('log.txt', userData + divider, (err) => {
       if (err) throw err;
     });
   }));
@@ -86,7 +87,7 @@ let movieThis = (queryTerm) => {
     console.log(`     * Plot: ${response.data.Plot}`);
     console.log(`     * Cast: ${response.data.Actors}\n`);
 
-    fs.appendFile('log.txt', userData, (err) => {
+    fs.appendFile('log.txt', userData + divider, (err) => {
       if (err) throw err;
     });
   });
