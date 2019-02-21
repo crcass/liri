@@ -11,19 +11,19 @@ let queryType = process.argv[2];
 let queryTerm = process.argv.slice(3).join(' ');
 
 // converts text to Title Case
-let titleCase = ((str) => {
+let titleCase = (str) => {
     return str.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
     }).join(' ');
-});
+};
 
 // random number generator
-let randomNum = ((max) => {
+let randomNum = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
-});
+};
 
 // takes user input and returns concert info from BandsInTown
-let concertThis = ((queryTerm) => {
+let concertThis = (queryTerm) => {
   queryTerm = queryTerm || 'cardi b'
   let queryUrl = `https://rest.bandsintown.com/artists/${queryTerm}/events?app_id=codingbootcamp`;
   axios.get(queryUrl).then((response) => {
@@ -47,10 +47,10 @@ let concertThis = ((queryTerm) => {
       }
     }
   });
-});
+};
 
 // takes user input and returns song info from Spotify
-let spotifyThis = ((queryTerm) => {
+let spotifyThis = (queryTerm) => {
   spotify.search({ type: 'track', query: queryTerm || 'the sign ace of base'}, ((err, data) => {
     if (err) {
       return console.log(`Error occurred: ${err}`);
@@ -69,10 +69,10 @@ let spotifyThis = ((queryTerm) => {
       if (err) throw err;
     });
   }));
-});
+};
 
 // takes user input and returns movie info from OMDB
-let movieThis = ((queryTerm) => {
+let movieThis = (queryTerm) => {
   queryTerm = queryTerm || 'mr nobody'
   let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
   axios.get(queryUrl).then((response) => {
@@ -92,10 +92,10 @@ let movieThis = ((queryTerm) => {
       if (err) throw err;
     });
   });
-});
+};
 
 // user let's LIRI choose for them
-let liriChoice = (() => {
+let liriChoice = () => {
   fs.readFile('random.txt', 'utf8', (err, data) => {
     if (err) throw err;
     fs.appendFile('log.txt', ',LIRI,', (err) => {
@@ -114,7 +114,7 @@ let liriChoice = (() => {
       default: console.log('If you are seeing this message, something went horribly wrong');
     }
   });
-});
+};
 
 // main logic loop
 switch (queryType) {
