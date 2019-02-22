@@ -34,11 +34,11 @@ let concertThis = queryTerm => {
     console.log(`   ---------------------------------------`);
     console.log(`    * ${titleCase(queryTerm)}'s next three shows:\n`);
     for (let i = 0; i < 3; i++) {
-      let concert = response.data[i];
-      userData.push(`Venue: ${concert.venue.name}, Location: ${concert.venue.city}, ${concert.venue.region}, Time: ${moment(concert.venue.datetime).format('ddd, MMM Do YYYY, h:mm a')}`);
-      console.log(`     * Venue: ${concert.venue.name}`);
-      console.log(`     * Location: ${concert.venue.city}, ${concert.venue.region}`);
-      console.log(`     * Time: ${moment(concert.venue.datetime).format('ddd, MMM Do YYYY, h:mm')} pm`);
+      let concert = response.data[i].venue;
+      userData.push(`Venue: ${concert.name}, Location: ${concert.city}, ${concert.region}, Time: ${moment(concert.datetime).format('ddd, MMM Do YYYY, h:mm a')}`);
+      console.log(`     * Venue: ${concert.name}`);
+      console.log(`     * Location: ${concert.city}, ${concert.region}`);
+      console.log(`     * Time: ${moment(concert.datetime).format('ddd, MMM Do YYYY, h:mm')} pm`);
       console.log(`                 --------`);
 
       if (i === 2) {
@@ -76,16 +76,17 @@ let movieThis = queryTerm => {
   queryTerm = queryTerm || 'mr nobody'
   let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
   axios.get(queryUrl).then(response => {
-    let userData = `${queryType}, Title: ${response.data.Title}, Released: ${response.data.Year}, IMDB Rating: ${response.data.Year}, ${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value}, Filmed in ${response.data.Country}, Plot: ${response.data.Plot}, Cast: ${response.data.Actors}`;
+    let movie = response.data;
+    let userData = `${queryType}, Title: ${movie.Title}, Released: ${movie.Year}, IMDB Rating: ${movie.Year}, ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}, Filmed in ${movie.Country}, Plot: ${movie.Plot}, Cast: ${movie.Actors}`;
     console.log(`\n     LIRI movie info from OMDB:`);
     console.log(`   ------------------------------`);
-    console.log(`     * Title: ${response.data.Title}`);
-    console.log(`     * Released: ${response.data.Year}`);
-    console.log(`     * IMDB Rating: ${response.data.Year}`);
-    console.log(`     * ${response.data.Ratings[1].Source} Rating: ${response.data.Ratings[1].Value}`);
-    console.log(`     * Filmed in ${response.data.Country}`);
-    console.log(`     * Plot: ${response.data.Plot}`);
-    console.log(`     * Cast: ${response.data.Actors}\n`);
+    console.log(`     * Title: ${movie.Title}`);
+    console.log(`     * Released: ${movie.Year}`);
+    console.log(`     * IMDB Rating: ${movie.Year}`);
+    console.log(`     * ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}`);
+    console.log(`     * Filmed in ${movie.Country}`);
+    console.log(`     * Plot: ${movie.Plot}`);
+    console.log(`     * Cast: ${movie.Actors}\n`);
 
     fs.appendFile('log.txt', userData + divider, (err) => {
       if (err) throw err;
