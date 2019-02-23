@@ -35,7 +35,7 @@ let concertThis = queryTerm => {
     console.log(`    * ${titleCase(queryTerm)}'s next three shows:\n`);
     for (let i = 0; i < 3; i++) {
       let concert = response.data[i].venue;
-      userData.push(`Venue: ${concert.name}, Location: ${concert.city}, ${concert.region}, Time: ${moment(concert.datetime).format('ddd, MMM Do YYYY, h:mm a')}`);
+      userData.push(`Venue: ${concert.name}, Location: ${concert.city}, ${concert.region}, Time: ${moment(concert.datetime).format('ddd, MMM Do YYYY, h:mm')}`);
       console.log(`     * Venue: ${concert.name}`);
       console.log(`     * Location: ${concert.city}, ${concert.region}`);
       console.log(`     * Time: ${moment(concert.datetime).format('ddd, MMM Do YYYY, h:mm')} pm`);
@@ -77,13 +77,15 @@ let movieThis = queryTerm => {
   let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
   axios.get(queryUrl).then(response => {
     let movie = response.data;
-    let userData = `${queryType}, Title: ${movie.Title}, Released: ${movie.Year}, IMDB Rating: ${movie.imdbRating}, ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}, Filmed in ${movie.Country}, Plot: ${movie.Plot}, Cast: ${movie.Actors}`;
+    console.log(movie);
+    let userData = `${queryType}, Title: ${movie.Title}, Released: ${movie.Year}, IMDB Rating: ${movie.imdbRating}, ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}, Language(s): ${movie.Language}, Filmed in ${movie.Country}, Plot: ${movie.Plot}, Cast: ${movie.Actors}`;
     console.log(`\n     LIRI movie info from OMDB:`);
     console.log(`   ------------------------------`);
     console.log(`     * Title: ${movie.Title}`);
     console.log(`     * Released: ${movie.Year}`);
     console.log(`     * IMDB Rating: ${movie.imdbRating}`);
     console.log(`     * ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}`);
+    console.log(`     * Language(s): ${movie.Language}`);
     console.log(`     * Filmed in ${movie.Country}`);
     console.log(`     * Plot: ${movie.Plot}`);
     console.log(`     * Cast: ${movie.Actors}\n`);
