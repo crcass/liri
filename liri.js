@@ -77,7 +77,6 @@ let movieThis = queryTerm => {
   let queryUrl = `http://www.omdbapi.com/?t=${queryTerm}&y=&plot=short&apikey=trilogy`;
   axios.get(queryUrl).then(response => {
     let movie = response.data;
-    console.log(movie);
     let userData = `${queryType}, Title: ${movie.Title}, Released: ${movie.Year}, IMDB Rating: ${movie.imdbRating}, ${movie.Ratings[1].Source} Rating: ${movie.Ratings[1].Value}, Language(s): ${movie.Language}, Filmed in ${movie.Country}, Plot: ${movie.Plot}, Cast: ${movie.Actors}`;
     console.log(`\n     LIRI movie info from OMDB:`);
     console.log(`   ------------------------------`);
