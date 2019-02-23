@@ -1,7 +1,7 @@
-concert-this, Artist: Cardi B,Venue: NRG Arena, Location: Houston, TX, Time: Fri, Feb 22nd 2019, 7:23,Venue: Beach Bash Music Festival, Location: South Padre Island, TX, Time: Fri, Feb 22nd 2019, 7:23,Venue: Javits Center, Location: New York, NY, Time: Fri, Feb 22nd 2019, 7:23
+concert-this, Artist: Cardi B,Venue: NRG Arena, Location: Houston, TX, Time: Fri, Feb 22nd 2019, 7:26,Venue: Beach Bash Music Festival, Location: South Padre Island, TX, Time: Fri, Feb 22nd 2019, 7:26,Venue: Javits Center, Location: New York, NY, Time: Fri, Feb 22nd 2019, 7:26
 ------------------------------------------------------------
 
-concert-this, Artist: Katy Perry,Venue: Ettamogah Hotel, Location: Green Ridge, , Time: Fri, Feb 22nd 2019, 7:23,Venue: City Park, Location: New Orleans, LA, Time: Fri, Feb 22nd 2019, 7:23,Venue: Fairgrounds New Orleans, Location: New Orleans, LA, Time: Fri, Feb 22nd 2019, 7:23
+concert-this, Artist: Katy Perry,Venue: Ettamogah Hotel, Location: Green Ridge, , Time: Fri, Feb 22nd 2019, 7:26,Venue: City Park, Location: New Orleans, LA, Time: Fri, Feb 22nd 2019, 7:26,Venue: Fairgrounds New Orleans, Location: New Orleans, LA, Time: Fri, Feb 22nd 2019, 7:26
 ------------------------------------------------------------
 
 spotify-this-song, Title: The Sign, Artist(s): Ace of Base, Album: The Sign (US Album) [Remastered], Preview on Spotify: https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB
@@ -16,24 +16,18 @@ movie-this, Title: Mr. Nobody, Released: 2009, IMDB Rating: 7.8, Rotten Tomatoes
 movie-this, Title: Indiana Jones and the Temple of Doom, Released: 1984, IMDB Rating: 7.6, Rotten Tomatoes Rating: 85%, Language(s): English, Sinhalese, Filmed in USA, Plot: In 1935, Indiana Jones arrives in India, still part of the British Empire, and is asked to find a mystical stone. He then stumbles upon a secret cult committing enslavement and human sacrifices in the catacombs of an ancient palace., Cast: Harrison Ford, Kate Capshaw, Jonathan Ke Quan, Amrish Puri
 ------------------------------------------------------------
 
-do-what-it-says, Artist: Ariana Grande,Venue: Times Union Center, Location: Albany, NY, Time: Fri, Feb 22nd 2019, 7:24,Venue: TD Garden, Location: Boston, MA, Time: Fri, Feb 22nd 2019, 7:24,Venue: KeyBank Center, Location: Buffalo, NY, Time: Fri, Feb 22nd 2019, 7:24
-------------------------------------------------------------
-
-do-what-it-says, Artist: Ariana Grande,Venue: Times Union Center, Location: Albany, NY, Time: Fri, Feb 22nd 2019, 7:24,Venue: TD Garden, Location: Boston, MA, Time: Fri, Feb 22nd 2019, 7:24,Venue: KeyBank Center, Location: Buffalo, NY, Time: Fri, Feb 22nd 2019, 7:24
-------------------------------------------------------------
-
-do-what-it-says, Artist: Ariana Grande,Venue: Times Union Center, Location: Albany, NY, Time: Fri, Feb 22nd 2019, 7:24,Venue: TD Garden, Location: Boston, MA, Time: Fri, Feb 22nd 2019, 7:24,Venue: KeyBank Center, Location: Buffalo, NY, Time: Fri, Feb 22nd 2019, 7:24
-------------------------------------------------------------
-
 do-what-it-says, Title: I Want It That Way, Artist(s): Backstreet Boys, Album: The Hits--Chapter One, Preview on Spotify: https://open.spotify.com/album/1NslKOZobWxINFaFkLol3r
 ------------------------------------------------------------
 
 do-what-it-says, Title: I Want It That Way, Artist(s): Backstreet Boys, Album: The Hits--Chapter One, Preview on Spotify: https://open.spotify.com/album/1NslKOZobWxINFaFkLol3r
 ------------------------------------------------------------
 
-do-what-it-says, Artist: Ariana Grande,Venue: Times Union Center, Location: Albany, NY, Time: Fri, Feb 22nd 2019, 7:24,Venue: TD Garden, Location: Boston, MA, Time: Fri, Feb 22nd 2019, 7:24,Venue: KeyBank Center, Location: Buffalo, NY, Time: Fri, Feb 22nd 2019, 7:24
+do-what-it-says, Title: I Want It That Way, Artist(s): Backstreet Boys, Album: The Hits--Chapter One, Preview on Spotify: https://open.spotify.com/album/1NslKOZobWxINFaFkLol3r
 ------------------------------------------------------------
 
 do-what-it-says, Title: Hook, Released: 1991, IMDB Rating: 6.7, Rotten Tomatoes Rating: 28%, Language(s): English, Filmed in USA, Plot: When Captain Hook kidnaps his children, an adult Peter Pan must return to Neverland and reclaim his youthful spirit in order to challenge his old enemy., Cast: Dustin Hoffman, Robin Williams, Julia Roberts, Bob Hoskins
+------------------------------------------------------------
+
+do-what-it-says, Artist: Ariana Grande,Venue: Times Union Center, Location: Albany, NY, Time: Fri, Feb 22nd 2019, 7:27,Venue: TD Garden, Location: Boston, MA, Time: Fri, Feb 22nd 2019, 7:27,Venue: KeyBank Center, Location: Buffalo, NY, Time: Fri, Feb 22nd 2019, 7:27
 ------------------------------------------------------------
 
