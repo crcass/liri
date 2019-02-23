@@ -129,11 +129,11 @@ switch (queryType) {
               |                                             |
               |  Avalable parameters are:                   | 
               |                                             | 
-              |     movie-this <movie title>                |
+              |     concert-this <artist/band name>         |
               |                                             |
               |     spotify-this-song <song title>          |
               |                                             |
-              |     concert-this <artist/band name>         |
+              |     movie-this <movie title>                |
               |                                             |
               |     do-what-it-says                         |
               |                                             |
